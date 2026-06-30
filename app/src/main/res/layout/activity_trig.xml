@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/placebo_magenta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+
+        <RelativeLayout
+            android:id="@+id/first_layer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/second_layer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/operationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:maxLength="16"
+                android:maxLines="2"
+                android:text="@string/zero"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/operationView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="96sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:id="@+id/second_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/second_drawable_layer"
+            android:elevation="40dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- First Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_resource"
+                    android:text="SIN"
+                    android:textColor="@color/white"
+
+                    android:textSize="25sp"
+                    app:backgroundTint="@null"
+
+                    />
+
+                <Button
+                    android:id="@+id/cos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/button_resource"
+                    android:backgroundTint="@null"
+                    android:text="COS"
+
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/tan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_resource"
+                    android:text="TAN"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    app:backgroundTint="@null"
+
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_resource"
+                android:backgroundTint="@null"
+                app:icon="@drawable/outline_arrow_back_24"
+                app:iconSize="45dp"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+
+                app:backgroundTint="@null" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sheet_dialog"
+                    app:icon="@drawable/rounded_arrow_drop_up_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_resource"
+                    app:iconSize="45dp"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/white"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="5sp"
+                    android:textAlignment="center"
+                    app:backgroundTint="@null"
+                    android:layout_marginTop="15dp"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
