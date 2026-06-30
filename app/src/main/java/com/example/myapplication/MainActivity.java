@@ -124,6 +124,7 @@ if(bID == R.id.one){
         operation_view.append(three.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.four) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(four.getText().toString());
@@ -132,6 +133,7 @@ if(bID == R.id.one){
         operation_view.append(four.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.five) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(five.getText().toString());
@@ -140,6 +142,7 @@ if(bID == R.id.one){
         operation_view.append(five.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.six) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(six.getText().toString());
@@ -148,6 +151,7 @@ if(bID == R.id.one){
         operation_view.append(six.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.seven) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(seven.getText().toString());
@@ -156,6 +160,7 @@ if(bID == R.id.one){
         operation_view.append(seven.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.eight) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(eight.getText().toString());
@@ -164,6 +169,7 @@ if(bID == R.id.one){
         operation_view.append(eight.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.nine) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(nine.getText().toString());
@@ -172,6 +178,7 @@ if(bID == R.id.one){
         operation_view.append(nine.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.zero) {
     if(value.equals("0") || isRepalced){
         operation_view.setText(zero.getText().toString());
@@ -180,19 +187,24 @@ if(bID == R.id.one){
         operation_view.append(zero.getText().toString());
 
     }
+    soundOne.start();
 }else if (bID == R.id.time) {
 
     if (value.contains("*")) return;
     operation_view.setText(value + times.getText());
+    soundOne.start();
 }else if (bID == R.id.plus) {
     if (value.contains("+")) return;
     operation_view.setText(value + plus.getText());
+    soundOne.start();
 }else if (bID == R.id.divide) {
     if (value.contains("/")) return;
     operation_view.setText(value.concat((String) divide.getText()));
+    soundOne.start();
 }else if (bID == R.id.minus) {
     if (value.contains("-")) return;
     operation_view.setText(value.concat((String) minus.getText()));
+    soundOne.start();
 }else if (bID == R.id.erase) {
     CharSequence currentNumbers = operation_view.getText();
     if (currentNumbers != null && currentNumbers.length() > 0) {
@@ -200,6 +212,7 @@ if(bID == R.id.one){
     }else if(operation_view.length() < 1){
         operation_view.setText("0");
     }
+    soundOne.start();
 }
 else if (bID == R.id.equals) {
     try {
@@ -267,6 +280,7 @@ else if (bID == R.id.equals) {
         display.setText("");
         isRepalced = false;
 } else if (bID == R.id.sheet_dialog) {
+    soundOne.start();
     BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this);
     View view1 = LayoutInflater.from(MainActivity.this).inflate(R.layout.more_options,null);
     bottomSheetDialog.setContentView(view1);
