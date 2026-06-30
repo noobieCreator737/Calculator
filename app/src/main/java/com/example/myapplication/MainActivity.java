@@ -215,6 +215,7 @@ if(bID == R.id.one){
     soundOne.start();
 }
 else if (bID == R.id.equals) {
+    soundOne.start();
     try {
         String mathExp = value;
         String operator = "";
@@ -276,6 +277,7 @@ else if (bID == R.id.equals) {
         throw new RuntimeException(e);
     }
 } else if (bID == R.id.clear) {
+    soundOne.start();
         operation_view.setText("0");
         display.setText("");
         isRepalced = false;
